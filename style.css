@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,24 +17,34 @@ html,body {
 
 #nav {
     height: 70px;
+    width: 100%;
     background-color: rebeccapurple;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 40px;
-    padding-right: 30px;
+    padding: 0px 2vw;
+    padding-right: 1vw;
+    position: relative;
 }
 
-#nav div{
+#nav div:first-child {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: red; */
-    width: 17%;
-    padding: 0px 8px;
+    width: 12%;
 }
 
-#nav img{
+
+
+#nav div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 17%;
+    padding: 0px 1.2vw;
+}
+
+#nav img {
     height: 60px;
     width: 60px;
     object-fit: cover;
@@ -42,16 +52,20 @@ html,body {
     border: 2px solid white;
 }
 
+
 #container {
     background-color: black;
+    height: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 50px 20px;
 }
 
-#container a{
+#container a {
     text-decoration: none;
+    width: 20%;
 }
 
 .links {
@@ -74,3 +88,42 @@ html,body {
     background-color: #0056b3;
     border-color: #ff00f7;
 }
+
+#moj {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moj h1 {
+    font-weight: bold;
+    font-size: 15vw;
+    transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    #nav div:nth-child(2) {
+        width: 33%;
+    }
+
+    #nav div:first-child {
+        width: 27%;
+    }
+
+    #moj {
+        height: 250px;
+    }
+
+    #container {
+        flex-direction: column;
+        height: fit-content;
+        gap: 12px;
+    }
+
+    #container a{
+        width: 60%;
+    }
+}
+

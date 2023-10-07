@@ -8,6 +8,8 @@
 html,body {
     height: 100%;
     width: 100%;
+    color: #333; /* Change the text color for better readability */
+    text-align: center; /* Center-align the text */
 }
 
 #main {
@@ -35,6 +37,11 @@ html,body {
     width: 12%;
 }
 
+#nav div:first-child span{
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid white;
+}
 
 
 #nav div:nth-child(2) {
@@ -49,10 +56,13 @@ html,body {
     height: 60px;
     width: 60px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid white;
+    transition: all ease 0.2s;
+    transform: scale(1.05); 
 }
 
+#nav img:hover {
+    transform: scale(1); /* Slightly increase the size on hover */
+}
 
 #container {
     background-color: black;
@@ -88,6 +98,24 @@ html,body {
 .links:hover {
     background-color: #0056b3;
     border-color: #ff00f7;
+}
+
+.links {
+    background: linear-gradient(45deg, #ff00f7, #007bff);
+    border-radius: 25px; /* Increase the border-radius for a rounded button effect */
+    padding: 15px 40px; /* Adjust padding for better button size */
+    font-weight: bold;
+    font-size: 18px; /* Slightly reduce font size for better fit */
+    transition: transform 0.2s ease-in-out;
+}
+
+.links:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+#moj h1 {
+    font-weight: bold;
+    font-size: 8vw; /* Adjust font size for better visibility */
+    transition: all ease 0.5s;
 }
 
 #moj {
@@ -147,3 +175,17 @@ html,body {
 
 }
 
+#nav {
+    background: linear-gradient(135deg, rebeccapurple, #ff00f7);
+    background-size: 150% 150%; /* Adjust as needed */
+    animation: gradientAnimation 10s ease infinite; /* Add an animation for a subtle effect */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
